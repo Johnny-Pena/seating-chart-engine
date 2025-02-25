@@ -13,7 +13,7 @@ import ProtectedRoute from './context/ProtectedRoute';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename="/seating-chart-engine">
         <div>
           <AuthWrapper>
             <Routes>
