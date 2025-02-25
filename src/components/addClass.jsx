@@ -22,12 +22,12 @@ const AddClass = () => {
     };
 
     try {
-      const response = await fetch('https://glistening-griffin-48c083.netlify.app/.netlify/functions/server/addClass', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userEmail, newClass }),
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/addClass`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userEmail, newClass }),
       });
 
       if (response.ok) {

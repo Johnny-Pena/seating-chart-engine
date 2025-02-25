@@ -30,7 +30,7 @@ const SaveClassData = ({ students, selectedClass, classDetails }) => {
     console.log('Sending saveClassData request:', requestData);
 
     try {
-      const response = await fetch('https://glistening-griffin-48c083.netlify.app/.netlify/functions/server/saveClassData', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/saveClassData`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

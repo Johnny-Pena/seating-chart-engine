@@ -54,7 +54,7 @@ export default function SeatingChartCard() {
   useEffect(() => {
     async function fetchUserDetails() {
       try {
-        const response = await fetch(`https://glistening-griffin-48c083.netlify.app/.netlify/functions/server/userDetails?userEmail=${userEmail}`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/.netlify/functions/server/userDetails?userEmail=${userEmail}`);
         const data = await response.json();
         if (data) {
           setDayOrder(data.dayOrder || []);
