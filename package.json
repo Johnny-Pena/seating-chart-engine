@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "cross-env GIT_TERMINAL_PROMPT=0 gh-pages -d dist --cache .gh-pages-cache"
   },
   "dependencies": {
     "daisyui": "^4.12.23",
@@ -25,6 +25,7 @@
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
     "eslint": "^9.19.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.0.0",
@@ -33,7 +34,6 @@
     "globals": "^15.14.0",
     "postcss": "^8.5.2",
     "tailwindcss": "^3.4.17",
-    "vite": "^6.1.0",
-    "cross-env": "^7.0.3"
+    "vite": "^6.1.0"
   }
 }
