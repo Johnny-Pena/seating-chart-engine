@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "cross-env GIT_TERMINAL_PROMPT=0 gh-pages -d dist .gh-pages-cache"
+    "deploy": "cross-env GIT_TERMINAL_PROMPT=0 gh-pages -d dist"
   },
   "dependencies": {
     "daisyui": "^4.12.23",
