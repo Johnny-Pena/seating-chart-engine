@@ -16,6 +16,7 @@ function Login() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'x-secret-key': process.env.REACT_APP_SECRET_KEY, // Add the secret key to the headers
         },
         body: JSON.stringify({ email, password }),
       });

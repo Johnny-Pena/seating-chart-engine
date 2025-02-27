@@ -23,11 +23,12 @@ const AddClass = () => {
 
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/addClass`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ userEmail, newClass }),
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-secret-key': process.env.REACT_APP_SECRET_KEY, // Add the secret key to the headers
+        },
+        body: JSON.stringify({ userEmail, newClass }),
       });
 
       if (response.ok) {

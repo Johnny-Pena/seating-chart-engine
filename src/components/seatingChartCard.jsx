@@ -54,7 +54,11 @@ export default function SeatingChartCard() {
   useEffect(() => {
     async function fetchUserDetails() {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/.netlify/functions/server/userDetails?userEmail=${userEmail}`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/.netlify/functions/server/userDetails?userEmail=${userEmail}`, {
+          headers: {
+            'x-secret-key': process.env.REACT_APP_SECRET_KEY, // Add the secret key to the headers
+          },
+        });
         const data = await response.json();
         if (data) {
           setDayOrder(data.dayOrder || []);
