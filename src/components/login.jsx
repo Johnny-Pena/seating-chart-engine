@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 function Login() {
@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/login`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/api/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,8 +22,6 @@ function Login() {
 
       const data = await response.json();
       if (response.ok) {
-        console.log('Login successful:', data);
-        console.log('You are now part of the club');
         login(email, data.user.classes, data.token); // Pass the email, classes, and token to the login function
         navigate('/seatingChartHomePage');
       } else {

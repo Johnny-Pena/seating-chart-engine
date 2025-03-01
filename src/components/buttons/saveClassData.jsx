@@ -30,7 +30,7 @@ const SaveClassData = ({ students, selectedClass, classDetails }) => {
     console.log('Sending saveClassData request:', requestData);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/saveClassData`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/api/saveClassData`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

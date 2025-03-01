@@ -22,7 +22,7 @@ const AddClass = () => {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/addClass`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/api/addClass`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -54,7 +54,7 @@ export default function SeatingChartCard() {
   useEffect(() => {
     async function fetchUserDetails() {
       try {
-        const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/userDetails?userEmail=${userEmail}`, {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/api/userDetails?userEmail=${userEmail}`, {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`, // Add the token to the headers
