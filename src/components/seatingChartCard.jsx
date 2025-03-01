@@ -49,14 +49,15 @@ export default function SeatingChartCard() {
   const [gradeOrder, setGradeOrder] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editingValue, setEditingValue] = useState('');
-  const { userEmail } = useAuth();
+  const { userEmail, token } = useAuth();
 
   useEffect(() => {
     async function fetchUserDetails() {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/.netlify/functions/server/userDetails?userEmail=${userEmail}`, {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/userDetails?userEmail=${userEmail}`, {
           headers: {
-            'x-secret-key': process.env.REACT_APP_SECRET_KEY, // Add the secret key to the headers
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Add the token to the headers
           },
         });
         const data = await response.json();
@@ -72,7 +73,7 @@ export default function SeatingChartCard() {
       }
     }
     fetchUserDetails();
-  }, [userEmail]);
+  }, [userEmail, token]);
 
   const handleClassSelect = (className) => {
     const selectedClassData = classes.find(cls => cls.teacherName === className);

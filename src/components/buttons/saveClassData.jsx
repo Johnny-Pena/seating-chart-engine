@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 
 const SaveClassData = ({ students, selectedClass, classDetails }) => {
-  const { userEmail } = useAuth();
+  const { userEmail, token } = useAuth();
   const [alertMessage, setAlertMessage] = useState(null);
   const [alertType, setAlertType] = useState(null);
 
@@ -30,11 +30,11 @@ const SaveClassData = ({ students, selectedClass, classDetails }) => {
     console.log('Sending saveClassData request:', requestData);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/saveClassData`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/saveClassData`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-secret-key': process.env.REACT_APP_SECRET_KEY, // Add the secret key to the headers
+          'Authorization': `Bearer ${token}`, // Add the token to the headers
         },
         body: JSON.stringify(requestData),
       });

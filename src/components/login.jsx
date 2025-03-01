@@ -12,11 +12,10 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-secret-key': process.env.REACT_APP_SECRET_KEY, // Add the secret key to the headers
         },
         body: JSON.stringify({ email, password }),
       });
@@ -25,7 +24,7 @@ function Login() {
       if (response.ok) {
         console.log('Login successful:', data);
         console.log('You are now part of the club');
-        login(email, data.user.classes); // Pass the email and classes data to the login function
+        login(email, data.user.classes, data.token); // Pass the email, classes, and token to the login function
         navigate('/seatingChartHomePage');
       } else {
         console.error('Login failed:', data.message);
