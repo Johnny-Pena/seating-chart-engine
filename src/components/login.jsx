@@ -35,8 +35,8 @@ function Login() {
   return (
     <div className="hero bg-base-200 min-h-screen flex items-center justify-center">
       <div className="flex flex-col items-center">
-        <h1 className="text-3xl font-bold mb-16">Essential Areas Seating Chart App</h1>
-        <h2 className="text-xl font-bold mb-4">Login</h2>
+        <h1 className="text-xl font-bold mb-16 sm:text-3xl">Essential Areas Seating Chart App</h1>
+        <h2 className="text-l font-bold mb-4 sm:text-xl">Enter Login Info:</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <label className="input input-bordered flex items-center gap-2">
             <input

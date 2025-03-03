@@ -94,7 +94,7 @@ const PickRandomStudentButton = ({ students, selectedClass }) => {
   return (
     <button
       id="random-student-generator"
-      className="btn btn-primary mt-4"
+      className="btn btn-primary mt-4 btn-sm md:btn-md"
       onClick={pickRandomStudent}
     >
       Pick Random Student

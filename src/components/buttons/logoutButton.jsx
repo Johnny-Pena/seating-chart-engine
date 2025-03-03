@@ -12,7 +12,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <button className="btn btn-secondary text-xl" onClick={handleLogout}>
+    <button className="btn btn-secondary text-sm btn-sm sm:text-xl btn-md" onClick={handleLogout}>
       Logout
     </button>
   );

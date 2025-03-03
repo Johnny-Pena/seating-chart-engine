@@ -116,7 +116,7 @@ export default function SeatingChartCard() {
         {students.map((student, index) => (
           <div
             key={index}
-            className={`badge badge-md ${getColor(index)} w-16 h-12 sm:w-24 sm:h-14 lg:w-48 lg:h-14 flex items-center justify-center`}
+            className={`badge badge-md ${getColor(index)} w-12 h-10 sm:w-24 sm:h-14 lg:w-48 lg:h-14 flex items-center justify-center`}
             draggable
             onDragStart={(event) => handleDragStart(event, student)}
             onDragOver={handleDragOver}
