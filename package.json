@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "cross-env GIT_TERMINAL_PROMPT=0 gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "daisyui": "^4.12.23",
