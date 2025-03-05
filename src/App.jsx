@@ -4,7 +4,7 @@ import './App.css';
 import './index.css';
 import Navbar from './components/navbar.jsx';
 import SeatingChartHomePage from './routes/seatingChartHomePage.jsx';
-import LoginPage from './routes/LoginPage.jsx';
+import LoginPage from './routes/Loginpage.jsx';
 import AddClassPage from './routes/AddClassPage.jsx'; // Ensure the correct file name and path
 import { AuthProvider, useAuth } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
