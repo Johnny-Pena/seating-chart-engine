@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/seating-chart-engine/' : '/', // Conditionally set the base URL
+  base: '/', // Set the base URL to root
   plugins: [react()],
 });
