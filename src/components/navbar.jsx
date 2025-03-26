@@ -32,7 +32,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <Link to="/seatingChartHomePage" className="btn btn-ghost text-xl">Seating Chart 2.0</Link>
+        <Link to="/seatingChartHomePage" className="btn btn-ghost text-xl">Seating Chart Ninja</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

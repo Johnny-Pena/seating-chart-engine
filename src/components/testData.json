@@ -1,0 +1,27 @@
+{
+        "dayOrder": ["A", "B", "C"],
+        "gradeOrder": ["1st", "Kinder", "2nd", "3rd", "4th", "5th"],
+        "classes": [
+            {
+        "teacherName": "Mr. Smith",
+        "day": "A",
+        "grade": "1st",
+        "students": [
+            "Liam", "Emma", "Noah", "Olivia", "William", "Ava", "James", "Isabella", "Oliver", "Sophia",
+            "Benjamin", "Charlotte", "Elijah", "Mia", "Lucas", "Amelia", "Mason", "Harper", "Logan", "Evelyn",
+            "Alexander", "Abigail", "Ethan", "Ella", "Jacob", "Scarlett", "Michael", "Grace"
+        ]
+    },
+    {
+        "teacherName": "Ms. Classroom",
+        "day": "A",
+        "grade": "5th",
+        "students": [
+            "Daniel", "Luna", "Henry", "Chloe", "Jackson", "Penelope", "Sebastian", "Layla", "Aiden", "Riley",
+            "Matthew", "Zoe", "Samuel", "Nora", "David", "Lily", "Joseph", "Eleanor", "Carter", "Hannah",
+            "Owen", "Lillian", "Wyatt", "Addison", "John", "Aubrey", "Jack", "Ellie"
+          ]
+
+    }
+]
+}
